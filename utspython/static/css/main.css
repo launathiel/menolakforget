@@ -1,0 +1,135 @@
+#logo{
+	}
+
+	body{
+		background-color: #E7D2CC;
+	}
+
+
+	#total-orders{
+		background-color: #484a4b;
+	}
+
+
+	#orders-delivered{
+		background-color: #7abecc;
+	}
+
+	#orders-pending{
+		background-color: #7CD1C0;
+	}
+
+	html, body{
+		padding: 0;
+		margin: 0;
+		scroll-behavior: smooth;
+		background-color: #FFCBA4;
+	}
+	
+	body *{
+		transition: 0.3s;
+	}
+	
+	
+	h1, h2, h3, h4, h5, h6, strong{
+		color: #000;
+		font-family: 'Russo One', sans-serif;
+		font-weight: 500;
+	}
+
+	h1 { font-size: 56px;}
+	h2 { font-size: 36px;}
+	h3 { font-size: 28px;}
+	h4 { font-size: 24px;}
+	h5 { font-size: 20px;}
+	h6 { font-size: 16px;}
+	
+	p, li, span, label, input, textarea{
+        color: #000;
+        font-family: 'Roboto Mono', monospace;
+	}
+
+
+	.nav-wrapper{
+		grid-area:nav-wrapper;
+		border-bottom: 1px solid #164D56;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color:#94553D;
+	}
+	
+	#navigation a{
+		color:#fff;
+		font-size: 16px;
+		font-family: 'Russo Mono';
+	}
+	
+	
+	#navigation{
+		margin:0;
+		margin-right: 100px;
+	}
+	
+	#navigation li{
+		display: inline-block;
+		margin-right: 15px;
+		margin-left:15px;
+	}
+	
+	.dots-wrapper{
+		display: flex;
+		padding: 10px;
+	}
+	
+	#dot-1{
+		background-color:  #FC6058;
+	}
+	
+	#dot-2{
+		background-color:  #FEC02F;
+	}
+	
+	#dot-3{
+		background-color:  #2ACA3E;
+	}
+	
+	.browser-dot{
+		background-color: black;
+		height: 15px;
+		width: 15px;
+		border-radius: 50%;
+		margin: 5px;
+	
+		-webkit-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+		-moz-box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+		box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+	
+	}
+
+	.footer_top {
+		padding-top: 20px;
+		padding-bottom: 10px;
+		background-color: #94553D
+	}
+	
+	.row{
+		text-align: center;
+	}
+
+	.social-links{
+		display: grid;
+		align-content: center;
+		text-align: center;
+	}
+	
+	.social-links{
+		display: grid;
+		align-content: center;
+		text-align: center;
+	}
+	
+	#social_img{
+		width: 80%;
+		padding-left: 50px;
+	}

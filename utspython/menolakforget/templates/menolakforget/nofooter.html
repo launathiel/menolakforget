@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment Remainder</title>
+		<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	</head>
+	<body>
+		<div class="nav-wrapper">
+			<a href="{% url 'home' %}">
+				<div class="dots-wrapper">
+					<div id="dot-1" class="browser-dot"></div>
+					<div id="dot-2" class="browser-dot"></div>
+					<div id="dot-3" class="browser-dot"></div>
+				</div>
+			</a>
+			<img src="{% static 'images/MF.png' %}" style="height: 28px; margin-left: 280px;" >
+			<ul id="navigation" style="margin-right:5px">
+				<li><a href="{% url 'home' %}" style="text-decoration:none">Dashboard</a></li>
+				<li><a href="{% url 'subjects' %}" style="text-decoration:none">Subject</a></li>
+				<li><a href="{% url 'about' %}" style="text-decoration:none">About</a></li>
+			</ul>
+		</div>
+		
+		<div class="container">
+			{% block content %}
+
+			{% endblock %}
+		</div>
+	</body>	
+</html>

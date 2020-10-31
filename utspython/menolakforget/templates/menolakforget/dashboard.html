@@ -1,0 +1,106 @@
+{%  extends 'menolakforget/main.html' %}
+
+{% block content %}
+
+<div class="row">
+	<div class="col-md-7">
+		<hr style=" border: 1px solid #94553D; border-radius: 5px;">
+		<h5 style="text-align: center;">List of the Students</h5>
+		<hr style=" border: 1px solid #94553D; border-radius: 5px;">
+		<div class="card card-body" style="background-color:#F3ECDA; border: 2px solid #94553D; border-radius: 5px;">
+			<table class="table table-sm" style="padding: 10px; background-color: #F3ECDA; margin-bottom: 3px;">
+				<tr>
+					<th style="font-family: 'Russo Mono';">Name</th>
+					<th style="font-family: 'Russo Mono';">Class</th>
+					<th style="font-family: 'Russo Mono';">NIM</th>
+				</tr>
+
+				{% for student in students %}
+					<tr>
+						<td style="font-family: 'font-awesome';">{{student.name}}</td>
+						<td style="font-family: 'font-awesome';">{{student.kelas}}</td>
+						<td style="font-family: 'font-awesome';">{{student.nim}}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+
+	<div class="col" style="padding-top: 23px; margin-right: -30px; margin-left: 10px;">
+		<div class="col">
+			<div class="col-md">
+				<div class="card text-center text-white  mb-3" id="total-orders">
+					<div class="card-header" style="background-color: #C4AC95;">
+						<h5 class="card-title">Total Assignments</h5>
+					</div>
+					<div class="card-body" style="background-color: #F3ECDA;">
+						<h3 class="card-title">{{total_assignments}}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" style="margin-top:26px">
+			<div class="col" style="padding-left: 45px ;">
+					<div>
+						<div class="card-header" style="background-color:#76B947;">
+							<h5 class="card-title">Assigned</h5>
+						</div>
+						<div class="card-body" style="background-color: #94C973;">
+							<h3 class="card-title">{{assigned}}</h3>
+						</div>
+					</div>
+			</div>
+
+			<div class="col" style="padding-right: 45px ;">
+					<div>
+						<div class="card-header" style="background-color: #e84e52;">
+							<h5 class="card-title" style="color: #000;">Unassigned</h5>
+						</div>
+						<div class="card-body" style="background-color:#f56f77;">
+							<h3 class="card-title" style="color: #000;">{{unassigned}}</h3>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div style="padding: 5px; ; margin-top: 20px; margin-bottom: 20px;">
+	<hr style=" border: 1px solid #94553D; border-radius: 5px;">
+	<h6 style="text-align: center;">“Mungkin kamu tidak tahu pasti hasil dari tindakanmu tapi kalau kamu tidak bertindak, dipastikan tidak akan pernah ada hasil”</h6>
+	<h6 style="text-align: center;">~Mahatma Gandhi~</h6>
+	<hr style=" border: 1px solid #94553D; border-radius: 5px;">
+</div>
+<div class="row" style="margin-top: 10px;">
+	<div class="col">
+		<div class="card card-body" style="background-color: #F3ECDA; border: 2px solid #94553D; border-radius: 5px;">
+			<a href="{% url 'create_assignment' %}" style="margin-bottom: 15px; background-color: #7B583D; color: #fff; padding: 5px; text-decoration: none;">Add Assignment</a>
+			<table class="table table-sm">
+				<tr>
+					<th style="font-family: 'Russo Mono';">Name</th>
+					<th style="font-family: 'Russo Mono';">Subject</th>
+					<th style="font-family: 'Russo Mono';">Category</th>
+					<th style="font-family: 'Russo Mono';">Status</th>
+					<th style="font-family: 'Russo Mono';">Deadline</th>
+					<th style="font-family: 'Russo Mono';">Update</th>
+					<th style="font-family: 'Russo Mono';">Remove</th>
+				</tr>
+
+				{% for assignment in assignments %}
+					<tr>
+						<td style="font-family: 'font-awesome';">{{assignment.student}}</td>
+						<td style="font-family: 'font-awesome';">{{assignment.subject}}</td>
+						<td style="font-family: 'font-awesome';">{{assignment.category}}</td>
+						<td style="font-family: 'font-awesome';">{{assignment.status}}</td>
+						<td style="font-family: 'font-awesome';">{{assignment.deadline}}</td>
+						<td style="font-family: 'font-awesome';"><a class="btn btn-sm btn-info" href="{% url 'update_assignment' assignment.id %}">Update</a></td>
+						<td><a class="btn btn-sm btn-danger" href="{% url 'delete_assignment' assignment.id %}">Delete</a></td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+

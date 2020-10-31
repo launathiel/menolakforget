@@ -1,0 +1,35 @@
+{%  extends 'menolakforget/main.html' %}
+
+{% block content %}
+
+		<br>
+
+		<div class="row">
+			<div class="col-md">
+				<div style="padding-bottom: 20px">
+					<hr style=" border: 1px solid #94553D; border-radius: 5px;">
+					<h4 style="text-align: center; font-family: 'Russo One';">List of Subject</h4>
+					<hr style=" border: 1px solid #94553D; border-radius: 5px;">
+				</div>
+				<div class="card card-body" style="background-color: #F3ECDA; border: 2px solid #94553D; border-radius: 5px;">
+					<table class="table" >
+						<tr>
+							<th style="font-family: 'Russo Mono';">Subject</th>
+							<th style="font-family: 'Russo Mono';">Semester</th>
+							<th style="font-family: 'Russo Mono';">Semester Credit Unit</th>
+						</tr>
+
+						{% for i in subjects %}
+							<tr>
+								<td style="font-family: 'font-awesome';">{{i.name}}</td>
+								<td style="font-family: 'font-awesome';">{{i.semester}}</td>
+								<td style="font-family: 'font-awesome';">{{i.sks}}</td>
+							</tr>
+						{% endfor %}
+					</table>
+				</div>
+			</div>
+			
+		</div>
+
+{% endblock content %}
