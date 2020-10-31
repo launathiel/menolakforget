@@ -4,8 +4,8 @@ Menolak Forget adalah applikasi yang dibuat untuk menjadi pengingat bagi mahasis
 
 ## Kelompok 
 1. Laurentius Nathaniel
-2. Ilyasa Affan
-3. Kinan
+2. Ilyasa Affan Arinto
+3. Muhammad Kinan Ibrahim
 
 ## Install on your local server
 
