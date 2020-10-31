@@ -41,11 +41,13 @@
                 <div style="display: flex; justify-content: center;">
                     <div class="row">
                         <div class="menu_links">
-                            <ul id="navigation" style="margin-right: 45px;">   
-								<li><a href="{% url 'home' %}" style="text-decoration:none">Home</a></li>
-								<li><a href="{% url 'subjects' %}" style="text-decoration:none">Subject</a></li>
-								<li><a href="{% url 'about' %}" style="text-decoration:none">About</a></li>
-                            </ul>
+							<div style="margin-left: -48px;">
+								<ul id="navigation">   
+									<li><a href="{% url 'home' %}" style="text-decoration:none">Home</a></li>
+									<li><a href="{% url 'subjects' %}" style="text-decoration:none">Subject</a></li>
+									<li><a href="{% url 'about' %}" style="text-decoration:none">About</a></li>
+								</ul>
+							</div>
                             <hr style="color: #000; width: 290px; margin-left: 90px;">
                         <div class="social_links" style="margin-top: 20px; margin-bottom: 20px;">
                             <ul>
