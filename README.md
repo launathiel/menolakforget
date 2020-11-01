@@ -1,6 +1,6 @@
 # Menolak Forget
 
-Menolak Forget adalah applikasi yang dibuat untuk menjadi pengingat bagi mahasiswa yang suka lupa akan tugas atau quiznya.
+Menolak Forget adalah aplikasi yang dibuat untuk menjadi pengingat bagi mahasiswa yang suka lupa akan tugas atau quiznya.
 
 ## Kelompok 
 1. Laurentius Nathaniel
@@ -12,7 +12,10 @@ Menolak Forget adalah applikasi yang dibuat untuk menjadi pengingat bagi mahasis
 Use the package manager [pip](https://pip.pypa.io/en/stable/)
 
 ```bash
+python3 -m venv utsdjango
+source utsdjango/bin/activate
 git clone https://github.com/launathiel/menolakforget
+cd menolakforget
 cd utspython
 pip install -r requirements.txt
 python manage.py runserver
