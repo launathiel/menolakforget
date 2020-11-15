@@ -25,4 +25,6 @@ python manage.py runserver
 Enjoy Menolak Forget!
 -
 @2020 Created using django for mid term semester test Python Programming
+
+#This Porject was closed.
  
